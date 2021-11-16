@@ -8,7 +8,7 @@ BaiduPCS-Go login -bduss=<BDUSS>
 # set parallel download threads
 BaiduPCS-Go config set -max_parallel 10
 # set parallel download files
-BaiduPCS-Go config set -max_download_load 3
+BaiduPCS-Go config set -max_download_load 2
 
 # set download dir
 BaiduPCS-Go config set -savedir /content/drive/Shareddrives/baidu/baidugo
