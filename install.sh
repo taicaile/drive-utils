@@ -18,4 +18,3 @@ if ! command -v "BaiduPCS-Go" &>/dev/null;  then
     rm BaiduPCS.zip
 
 fi
-
