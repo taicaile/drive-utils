@@ -5,16 +5,21 @@ This script aims to install `BaiduPCS-Go` automatically.
 ```bash
 # login
 BaiduPCS-Go login -bduss=<BDUSS>
-# set parallel download threads
+
+# set parallel download workers
 BaiduPCS-Go config set -max_parallel 10
-# set parallel download files
-BaiduPCS-Go config set -max_download_load 2
+
+# set parallel download files, set 1 if using rclone mount
+BaiduPCS-Go config set -max_download_load 1
 
 # set download dir
 BaiduPCS-Go config set -savedir /content/drive/Shareddrives/baidu/baidugo
-
 # set current dir as download dir,
 BaiduPCS-Go config set -savedir $PWD
+
+# set cache size, default 64 KB,
+BaiduPCS-Go config set -cache_size 64m
+
 ```
 
 Monitor a specific directory, if any file inside, download it and remove it if success.
