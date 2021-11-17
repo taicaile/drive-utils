@@ -12,6 +12,9 @@ BaiduPCS-Go config set -max_download_load 2
 
 # set download dir
 BaiduPCS-Go config set -savedir /content/drive/Shareddrives/baidu/baidugo
+
+# set current dir as download dir,
+BaiduPCS-Go config set -savedir $PWD
 ```
 
 Monitor a specific directory, if any file inside, download it and remove it if success.
@@ -41,4 +44,9 @@ curl -sL https://raw.githubusercontent.com/taicaile/drive_baidu/master/monitor.s
 ```text
 # TODO
 - 能够添加一个 server， 可以远程控制下载任务
+```
+
+```bash
+# get free space for current directory
+df -Ph . | tail -1 | awk '{print $4}'
 ```
