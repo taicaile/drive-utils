@@ -34,7 +34,8 @@ repos:
         entry: markdownlint
         language: node
         types: [markdown]
-
+        args: [--disable, line_length]
+        # --disable line_length
       - id: shellcheck
         name: shellcheck
         description: "Finds bugs in your shell scripts."

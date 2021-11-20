@@ -37,13 +37,13 @@ BaiduPCS-Go d ready2download/xxx/
 To install `BaiduPCS-Go`,
 
 ```bash
-curl -sL https://raw.githubusercontent.com/taicaile/drive_baidu/master/install.sh | bash
+curl -sL https://raw.githubusercontent.com/taicaile/drive_utils/master/install.sh | bash
 ```
 
 To download all files/directories under `ready2download`,
 
 ```bash
-curl -sL https://raw.githubusercontent.com/taicaile/drive_baidu/master/monitor.sh | bash
+curl -sL https://raw.githubusercontent.com/taicaile/drive_utils/master/monitor.sh | bash
 ```
 
 ```text
