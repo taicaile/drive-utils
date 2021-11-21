@@ -62,7 +62,7 @@ To install `aliyunpan`
 
 ```bash
 # this will install aliyunpan for current user
-./install_aliyun.sh
+curl -sL https://raw.githubusercontent.com/taicaile/drive_utils/master/install_aliyun.sh | bash
 ```
 
 Update config,
@@ -84,5 +84,5 @@ aliyunpan config set -cache_size 64m
 To download files/dirs under `ready2download` directory,
 
 ```bash
-
+curl -sL https://raw.githubusercontent.com/taicaile/drive_utils/master/monitor_aliyun.sh| bash
 ```
