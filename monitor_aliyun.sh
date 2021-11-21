@@ -26,8 +26,10 @@ FILES=$($COMMAND ls "$MONITOR_DIR" |  head -n -2 | tail -n +2)
 IFS=$'\n'
 for LINE in $FILES; do
     FILE="${LINE:36}"
+    FILE="${FILE%%+( )}"
+    # echo "${FILE%%/*}"
     if [ -n "$FILE" ] && [ "$FILE" != " " ];then
         echo "[Download]: $MONITOR_DIR/$FILE"
-        $COMMAND d "$MONITOR_DIR/$FILE" && $COMMAND rm "$MONITOR_DIR/$FILE"
+        # $COMMAND d "$MONITOR_DIR/$FILE" && $COMMAND rm "$MONITOR_DIR/$FILE"
     fi
 done

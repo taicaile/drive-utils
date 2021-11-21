@@ -69,7 +69,7 @@ Update config,
 
 ```bash
 # set parallel download workers
-aliyunpan config set -max_parallel 10
+# aliyunpan config set --max_download_parallel 10
 
 # set parallel download files, set 1 if using rclone mount
 aliyunpan config set -max_download_load 1
