@@ -30,6 +30,6 @@ for LINE in $FILES; do
     # echo "${FILE%%/*}"
     if [ -n "$FILE" ] && [ "$FILE" != " " ];then
         echo "[Download]: $MONITOR_DIR/$FILE"
-        # $COMMAND d "$MONITOR_DIR/$FILE" && $COMMAND rm "$MONITOR_DIR/$FILE"
+        $COMMAND d "$MONITOR_DIR/$FILE" && $COMMAND rm "$MONITOR_DIR/$FILE"
     fi
 done
