@@ -17,7 +17,7 @@ if ! command -v "$PROGRAM" &>/dev/null;  then
 
     unzip -o -j -d installer installer.zip
 
-    cp installer/$PROGRAM  $PROGRAM_DIR
+    cp installer/$PROGRAM $PROGRAM_DIR
 
     rm -rf installer
     rm installer.zip
