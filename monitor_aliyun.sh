@@ -30,7 +30,7 @@ for FILE in $FILES; do
     # FILE="${FILE%%+( )}"
     # echo "${FILE%%/*}"
     if [ -n "$FILE" ] && [ "$FILE" != " " ];then
-        echo "[Download]: $MONITOR_DIR/${FILE%%+([ \t])}"
-        $COMMAND d "$MONITOR_DIR/${FILE%%+( )}" && $COMMAND rm "$MONITOR_DIR/${FILE%%+( )}"
+        echo "[Download]: $MONITOR_DIR/${FILE}"
+        $COMMAND d "$MONITOR_DIR/${FILE}" && $COMMAND rm "$MONITOR_DIR/${FILE}"
     fi
 done
