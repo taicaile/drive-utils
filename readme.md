@@ -86,3 +86,16 @@ To download files/dirs under `ready2download` directory,
 ```bash
 curl -sL https://raw.githubusercontent.com/taicaile/drive_utils/master/monitor_aliyun.sh| bash
 ```
+
+Refresh token,
+
+```bash
+aliyunpan token update -mode 2
+
+# edit crontab
+crontab -e
+# add following,
+*/60  * * * * aliyunpan token update -mode 2
+# restart cron
+sudo service cron restart
+```
