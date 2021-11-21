@@ -13,7 +13,7 @@ BaiduPCS-Go config set -max_parallel 10
 BaiduPCS-Go config set -max_download_load 1
 
 # set download dir
-BaiduPCS-Go config set -savedir /content/drive/Shareddrives/baidu/baidugo
+# BaiduPCS-Go config set -savedir /content/drive/Shareddrives/baidu/baidugo
 # set current dir as download dir,
 BaiduPCS-Go config set -savedir $PWD
 
@@ -54,4 +54,35 @@ curl -sL https://raw.githubusercontent.com/taicaile/drive_utils/master/monitor.s
 ```bash
 # get free space for current directory
 df -Ph . | tail -1 | awk '{print $4}'
+```
+
+## aliyunpan
+
+To install `aliyunpan`
+
+```bash
+# this will install aliyunpan for current user
+./install_aliyun.sh
+```
+
+Update config,
+
+```bash
+# set parallel download workers
+aliyunpan config set -max_parallel 10
+
+# set parallel download files, set 1 if using rclone mount
+aliyunpan config set -max_download_load 1
+
+# set current dir as download dir,
+aliyunpan config set -savedir $PWD
+
+# set cache size, default 64 KB,
+aliyunpan config set -cache_size 64m
+```
+
+To download files/dirs under `ready2download` directory,
+
+```bash
+
 ```

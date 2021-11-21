@@ -4,6 +4,8 @@ set -e
 
 PROGRAM=aliyunpan
 USER_REPO=tickstep/aliyunpan
+PROGRAM_DIR=~/.local/bin/
+mkdir -p $PROGRAM_DIR
 
 if ! command -v "$PROGRAM" &>/dev/null;  then
 
@@ -13,9 +15,9 @@ if ! command -v "$PROGRAM" &>/dev/null;  then
     | tr -d \" \
     | wget -O installer.zip -qi -
 
-    unzip -j -d installer installer.zip
+    unzip -o -j -d installer installer.zip
 
-    cp installer/$PROGRAM /usr/local/bin/
+    cp installer/$PROGRAM  $PROGRAM_DIR
 
     rm -rf installer
     rm installer.zip
