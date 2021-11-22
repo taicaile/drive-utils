@@ -84,7 +84,7 @@ aliyunpan config set -cache_size 64m
 To download files/dirs under `ready2download` directory,
 
 ```bash
-curl -sL https://raw.githubusercontent.com/taicaile/drive_utils/master/monitor_aliyun.sh| bash
+curl -sL https://raw.githubusercontent.com/taicaile/drive_utils/master/monitor_aliyun.sh | bash
 ```
 
 Refresh token,
