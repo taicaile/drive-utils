@@ -29,7 +29,9 @@ do
     FILES=$($COMMAND tree --depth 0 "$MONITOR_DIR")
     IFS=$'\n'
     for LINE in $FILES; do
-        FILE=$(echo "$LINE" | cut -d " " -f 2-)
+        # FILE=$(echo "$LINE" | cut -d " " -f 2-)
+        # match "├── ", and delete the matchings
+        FILE=$(echo "$LINE" | sed -E "s/├── //")
         if [ -n "$FILE" ] && [ "$FILE" != " " ];then
             echo "[Download]: $MONITOR_DIR/$FILE"
             $COMMAND d "$MONITOR_DIR/$FILE" && $COMMAND rm "$MONITOR_DIR/$FILE"
