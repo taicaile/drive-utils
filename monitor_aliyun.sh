@@ -23,20 +23,17 @@ fi
 
 while :
 do
-    # FILES=$($COMMAND ls "$MONITOR_DIR" |  head -n -2 | tail -n +2)
-    FILES=$($COMMAND ls "$MONITOR_DIR" | awk 'BEGIN{RS="\n" ;FS=" "; NF=5}/[0-9]{2}:[0-9]{2}:[0-9]{2}/{print $5}')
+    FILES=$($COMMAND ls "$MONITOR_DIR" | awk '/[0-9]{2}:[0-9]{2}/')
 
     IFS=$'\n'
     for FILE in $FILES; do
-        # FILE=$(echo $LINE | awk 'BEGIN{FS=" "}{print $5}')
-        # FILE="${FILE%%+( )}"
-        # echo "${FILE%%/*}"
+        FILE=$(echo "$FILE" | sed -E "s/.*[0-9]{2}:[0-9]{2}  //g")
         if [ -n "$FILE" ] && [ "$FILE" != " " ];then
             echo "[Download]: $MONITOR_DIR/${FILE}"
-            $COMMAND d "$MONITOR_DIR/${FILE}" && $COMMAND rm "$MONITOR_DIR/${FILE}"
+            # $COMMAND d "$MONITOR_DIR/${FILE}" && $COMMAND rm "$MONITOR_DIR/${FILE}"
         fi
     done
-
-    sleep $(( (RANDOM % 5)  + 5 ))h
-
+    SLEEP_RANDOM=$(( (RANDOM % 5)  + 5 ))h
+    echo "ready to sleep for $SLEEP_RANDOM, now is $(date)"
+    sleep $RANDOM
 done
