@@ -38,6 +38,6 @@ do
 
     SLEEP_RANDOM=$(( (RANDOM % 5)  + 5 ))h
     echo "ready to sleep for $SLEEP_RANDOM, now is $(date)"
-    sleep $RANDOM
+    sleep $SLEEP_RANDOM
 
 done
