@@ -27,6 +27,7 @@ do
     IFS=$'\n'
     for FILE in $FILES; do
         FILE=$(echo "$FILE" | sed -E "s/.*[0-9]{2}:[0-9]{2}  //g")
+        FILE=$(echo "$FILE" | sed -E "s/[[:blank:]]+$//")
         if [ -n "$FILE" ] && [ "$FILE" != " " ];then
             echo "[Download]: $MONITOR_DIR/$FILE"
             $COMMAND d "$MONITOR_DIR/$FILE" && $COMMAND rm "$MONITOR_DIR/$FILE"
