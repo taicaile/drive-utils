@@ -37,13 +37,13 @@ BaiduPCS-Go d ready2download/xxx/
 To install `BaiduPCS-Go`,
 
 ```bash
-curl -sL https://raw.githubusercontent.com/taicaile/drive_utils/master/install.sh | bash
+curl -sL https://raw.githubusercontent.com/taicaile/drive-utils/master/install.sh | bash
 ```
 
 To download all files/directories under `ready2download`,
 
 ```bash
-curl -sL https://raw.githubusercontent.com/taicaile/drive_utils/master/monitor.sh | bash
+curl -sL https://raw.githubusercontent.com/taicaile/drive-utils/master/monitor.sh | bash
 ```
 
 ```text
@@ -62,7 +62,7 @@ To install `aliyunpan`
 
 ```bash
 # this will install aliyunpan for current user
-curl -sL https://raw.githubusercontent.com/taicaile/drive_utils/master/install_aliyun.sh | bash
+curl -sL https://raw.githubusercontent.com/taicaile/drive-utils/master/install_aliyun.sh | bash
 ```
 
 Update config,
@@ -84,7 +84,7 @@ aliyunpan config set -cache_size 64m
 To download files/dirs under `ready2download` directory,
 
 ```bash
-curl -sL https://raw.githubusercontent.com/taicaile/drive_utils/master/monitor_aliyun.sh | bash
+curl -sL https://raw.githubusercontent.com/taicaile/drive-utils/master/monitor_aliyun.sh | bash
 ```
 
 Refresh token,
