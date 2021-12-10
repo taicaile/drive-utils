@@ -20,6 +20,8 @@ BaiduPCS-Go config set -savedir $PWD
 # set cache size, default 64 KB,
 BaiduPCS-Go config set -cache_size 64m
 
+# set max download speed
+BaiduPCS-Go  config set -max_download_rate 8m
 ```
 
 Monitor a specific directory, if any file inside, download it and remove it if success.
@@ -79,6 +81,9 @@ aliyunpan config set -savedir $PWD
 
 # set cache size, default 64 KB,
 aliyunpan config set -cache_size 64m
+
+# set max download speed
+aliyunpan config set -max_download_rate 8m
 ```
 
 To download files/dirs under `ready2download` directory,
